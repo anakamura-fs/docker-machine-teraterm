@@ -21,5 +21,5 @@ if [ $TITLE ]; then
 fi
 
 # 本来「/」である個所を「//」にしてるのは、git for windowsのクセのため。ほかのシェル環境(cygwin等々)だと「/」に戻したほうが良い。
-"$TTERM" docker@${DOCKER_IP_ADR}:22 //auth=publickey //keyfile="$(echo $HOME/.docker/machine/machines/$MACHINE/id_rsa | xargs cygpath -w )" ${TITLE_FOR_TTERM} &
+"$TTERM" docker@${DOCKER_IP_ADR}:22 //auth=publickey //keyfile="$(echo ~/.docker/machine/machines/$MACHINE/id_rsa | xargs cygpath -w )" ${TITLE_FOR_TTERM} &
 
